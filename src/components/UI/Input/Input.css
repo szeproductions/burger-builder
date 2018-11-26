@@ -1,0 +1,29 @@
+.custom-input-9876b {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.custom-input-9876b > label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  width: 100%;
+  text-align: left;
+}
+
+.custom-input-9876b > .inputElement {
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font: inherit;
+  padding: 6px 10px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.custom-input-9876b > .inputElement:focus {
+  outline: none;
+  background: #ccc;
+}

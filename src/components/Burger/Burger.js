@@ -1,5 +1,7 @@
 import React from 'react';
-import tachyons from 'tachyons';
+
+import {connect} from 'react-redux';
+
 import './Burger.css'
 import Ingredient from './Ingredient/Ingredient';
 
@@ -10,12 +12,13 @@ const Burger = (props) => {
                           return <Ingredient key={igKey + i} type={igKey} />
                         });
                       }).flat();
-                      
+
   if(ingredients.length === 0) {
-      ingredients = <p className='bg-light-blue pa2 ma5'>Please start adding ingredients</p>
+      ingredients = <p className='bg-light-blue pa2 mt2 mb2 ma5'>Please start adding ingredients</p>
   }
 
   return (
+
     <div className='burger'>
       <Ingredient type='bread-top' />
       {ingredients}
@@ -24,4 +27,10 @@ const Burger = (props) => {
   );
 }
 
-export default Burger;
+const mapStateToProps = (state) => {
+  return {
+    ingredients: state.burger.ingredients,
+  };
+}
+
+export default connect(mapStateToProps)(Burger);

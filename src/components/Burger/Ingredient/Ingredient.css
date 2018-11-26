@@ -110,3 +110,11 @@
   background: linear-gradient(#bf3813, #c45e38);
   margin: 2% auto;
 }
+
+.tomatoes {
+  width: 75%;
+  height: 3%;
+  margin: 2% auto;
+  background: linear-gradient(#f43d04, #ff0000);
+  border-radius: 20px;
+}
